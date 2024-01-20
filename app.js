@@ -1,4 +1,5 @@
 const express = require('express');
+
 const bodyParser = require('body-parser');
 // const MongoClient = require('mongodb').MongoClient;
 const mongodb = require('./backend/db/connect');
@@ -13,7 +14,7 @@ app
     res.setHeader('Access-Control-Allow-Origin', '*');
     next();
   })
-  // .use('/', require('./routes'));
+  .use('/', require('./backend/routes'));
 
 mongodb.initDb((err, mongodb) => {
   if (err) {
