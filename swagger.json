@@ -5,17 +5,16 @@
     "description": "Temple API",
     "version": "1.0.0"
   },
-  "host": "localhost:8080",
+  "host": "https://act1w1.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http",
     "https"
   ],
   "paths": {
     "/api-docs": {
       "get": {
         "tags": ["Hello World"],
-        "description": "",
+        "description": "OK",
         "parameters": [],
         "responses": {}
       }
