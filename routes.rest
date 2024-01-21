@@ -1,33 +1,31 @@
 // LOCALHOST ### Get all contacts
-GET http://localhost:3001/users
+GET http://localhost:8080/users
 ### Get contact by id 
-GET http://localhost:3001/users/622023f642f9ab4cd6e060b3
+GET http://localhost:8080/users/622023f642f9ab4cd6e060b3
 
 ### Create contact
-POST http://localhost:3001/users HTTP/1.1 
+POST http://localhost:8080/users HTTP/1.1 
 content-type: application/json
 
 {
-    "firstName":"Ashley", 
-    "lastName":"Weaver",
-    "email":"aWeaver@test.com",
-    "favoriteColor":"Brown", 
-    "birthday":"06/19/2000"
+     "email": "test@example.com",
+        "userName": "test1@test.com",
+        "name": "Hello1",
+        "ipaddress": "94.121.168.53"
 }
 
 ### PUT contact
-PUT http://localhost:3001/users/6220bcb39cd507e920c75a0b HTTP/1.1 
+PUT http://localhost:8080/users/6220bcb39cd507e920c75a0b HTTP/1.1 
 content-type: application/json
 
 {
-    "firstName":"Sarah",
-     "lastName":"Birch",
-    "email":"test@gmail.com",
-    "favoriteColor":"Green",
-    "birthday":"12/12/20"
+    "email": "test@example.com",
+        "userName": "test1@test.com",
+        "name": "Hello1",
+        "ipaddress": "94.121.168.53"
 } ### DELETE contact 
 
-DELETE http://localhost:3001/users/6220b775099269ff7b31ceab HTTP/1.1
+DELETE http://localhost:8080/users/6220b775099269ff7b31ceab HTTP/1.1
 
 // PRODUCTION Deploy ### Get all contacts 
 GET https://cse341-instructor.herokuapp.com/

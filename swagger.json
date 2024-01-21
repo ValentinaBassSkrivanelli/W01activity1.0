@@ -8,11 +8,13 @@
   "host": "localhost:8080",
   "basePath": "/",
   "schemes": [
-    "http"
+    "http",
+    "https"
   ],
   "paths": {
     "/api-docs": {
       "get": {
+        "tags": ["Hello World"],
         "description": "",
         "parameters": [],
         "responses": {}

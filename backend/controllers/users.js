@@ -1,5 +1,6 @@
-const mongodb = require('../db/connect');
 
+const mongodb = require('../db/connect');
+const ObjectId = require('mongodb').ObjectId;
 const getAll = async (req, res) => {
     console.log('comienzo getall')
     
@@ -21,11 +22,10 @@ const getSingle = async (req, res) => {
 const createUser = async (req, res) => {
    //swagger.tags=['users]
     const user = {
-        firstName: req.body.firstName,
-        lastName: req.body.lastName,
         email: req.body.email,
-        favoriteColor: req.body.favoriteColor,
-        birthday: req.body.birthday,
+        userName: req.body.userName,
+        name: req.body.name,
+        ipaddress: req.body.ipaddress
     };
     const response = await mongodb.getDb().db.collection('users').insertOne(user);
     if (response.acknowledged) {
@@ -55,7 +55,7 @@ const updateUser = async (req, res) => {
 
 const deleteUser = async (req, res) => {
     const userId = new ObjectId(req.params.id);
-    const response = await mongodb.getDb().db.collection('users').replaceOne({_id: userId}, user);
+    const response = await mongodb.getDb().db.collection('users').deleteOne({ _id: userId },);
     if (response.deletedCount > 0) {
         res.status(204).send();
     } else {
