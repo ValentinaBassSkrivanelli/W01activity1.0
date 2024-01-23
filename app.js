@@ -7,7 +7,7 @@ const bodyParser = require('body-parser');
 const mongodb = require('./backend/data/database');
 // const professionalRoutes = require('./routes/professional');
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3010;
 const app = express();
 
 app

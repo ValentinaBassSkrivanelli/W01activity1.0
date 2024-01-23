@@ -6,7 +6,7 @@ async function apiFetch(url) {
 }
 
 const getData = async () => {
-  const data = await apiFetch('http://localhost:3000/professional');
+  const data = await apiFetch('http://localhost:3010/professional');
   displayAllData(data);
 };
 
